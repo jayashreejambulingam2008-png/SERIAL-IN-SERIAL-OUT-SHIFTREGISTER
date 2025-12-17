@@ -29,14 +29,36 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+ Program for flipflops and verify its truth table in quartus using Verilog programming.
+```
+module DEExp10(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
+```
+Developed by: JAYASHREE J
 
-Developed by: RegisterNumber:
+RegisterNumber: 25014460
 
-*/
 
 **RTL LOGIC FOR SISO Shift Register**
 
+![WhatsApp Image 2025-12-17 at 10 47 38 AM](https://github.com/user-attachments/assets/b609b578-bed5-4037-a23f-7581fe8be4d9)
+
 **TIMING DIGRAMS FOR SISO Shift Register**
 
+![WhatsApp Image 2025-12-17 at 10 50 08 AM](https://github.com/user-attachments/assets/d4d1f311-aae9-4fb6-b0f7-b5ac4db526c7)
+
+
 **RESULTS**
+
+Hence the program to implement  SISO Shift Register using verilog and validating their functionality using their functional tables has been completed successfully.
